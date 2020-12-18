@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    bodY{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    ul{
+        display:flex;
+    }
+    ul li{
+        margin: 20px;
+        list-style: none;
+        font-size: 2em;
+        padding: 10px;
+
+    }
+    ul li.active{
+        background-color: goldenrod;
+        color: #fff;
+    }
+</style>
+</head>
+
+<body>
+    <ul>
+        <li class="active">Home</li>
+        <li>Profile</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Gallery</li>
+    </ul>
+    <script>
+        $(document).on('click','ul li',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+
+        })
+    </script>
+</body>
+</html>
