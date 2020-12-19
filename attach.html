@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect HTML CSS In Just 5 Minutes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .first{
+            width: 100%;
+            height: 100vh;
+            background: url('coniferous-tree-background-picjumbo-com.jpg');
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-position:center;
+            display:table;
+            background-attachment: fixed;
+        }
+        .second{
+            width: 100%;
+            height: 100vh;
+            background: url('iceland-crystal-water-picjumbo-com.jpg');
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-position:center;
+            display:table;
+            background-attachment: fixed;
+        }
+        .third{
+            width: 100%;
+            height: 100vh;
+            background: url('plane-on-the-black-sand-in-iceland-picjumbo-com.jpg');
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-position:center;
+            display:table;
+            background-attachment: fixed;
+        }
+        h1{
+            display:table-cell;
+            vertical-align:middle;
+            text-align: center;
+            font-size: 4em;
+            color: #fff;
+            letter-spacing: 2px;
+            background: url("iceland-crystal-water-picjumbo-com.jpg");
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pos 20s linear infinite;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+                @keyframes pos {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+        }
+                
+
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1>Coniferous Tree Background</h1>
+    </div>
+    <div class="second">
+        <h1> Iceland Crystal Water</h1>
+    </div>
+    <div class="third">
+        <h1>Plane on The Black Sand in Iceland</h1>
+    </div>
+</body>
+</html>
