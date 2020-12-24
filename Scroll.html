@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Image Zoom On Scroll using HTML CSS & JS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 100%;
+            height: 770px;
+            position: relative;
+            overflow: hidden;
+        }
+        div img{
+            width: 100%;
+            position:absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .text{
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .text h1{
+            font-size: 5em;
+            margin: 15px 0;
+            font-family: monospace;
+            color: goldenrod;
+            letter-spacing: 5px;
+        }
+        .text p{
+            font-size: 1.2em;
+            margin: 7px 0;
+            padding: 10px;
+            line-height: 2;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        p:nth-child(odd){
+            color:goldenrod;
+            background-color:rgb(37 56 54);
+        }
+        ::-webkit-scrollbar{
+            width: 5px;
+            background-color: #000;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: goldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="xoom"><img src="pexels-隔壁光头老王-wangming'photo-354939.jpg" alt=""></div>
+    <div class="text">
+        <h1>Dummy Text</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis ducimus soluta eum qui, accusamus fugiat ratione odit sint distinctio nihil sunt est a natus delectus ipsam recusandae totam atque reiciendis praesentium cupiditate perferendis possimus! Praesentium veniam atque enim eum.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>\
+    <script>
+        $(window).scroll(function(){
+            let scroll =$(window).scrollTop();
+            $(".xoom img").css({
+                width:(100 + scroll/10)+"%"
+            })
+        })
+    </script>
+</body>
+</html>
